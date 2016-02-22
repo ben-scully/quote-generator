@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+#wrapper {
+  margin: 0 auto;
+  width: 600px;
+  min-height: 200px;
+  background-color: green;
+  padding: 40px;
+}
+
+#quote {
+    margin-bottom: 20px;
+}
+
+.quote-box {
+  min-height: 50px;
+  background: blue;
+  text-align: center;
+
+}
+
+.author-box {
+  text-align: right;
+  margin-top: 10px; 
+}
+
+#buttons {
+  background-color: yellow;
+}
+
+#button {
+  float: right;
+  color: red;
+}
