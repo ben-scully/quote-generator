@@ -1,4 +1,31 @@
+//-----------------------------------------------------
+var reloadTwitter = function() {
 
+  window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+   
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+   
+    return t;
+  }(document, "script", "twitter-wjs"));
+
+}
+
+
+
+
+
+
+//-------------------------------------------------------
 var quoteArray = [
   {
     text: "What a blessing it would be if we could open and shut our ears as easily as we open and shut our eyes!",
@@ -24,10 +51,17 @@ var grabQuote = function() {
   return quoteArray[random];
 };
 
-
-document.querySelector('#button').addEventListener("click", function(){
+var init = function(){
   var quote = grabQuote();
   //console.log(quote)
-  document.querySelector('.quote-box').innerHTML = quote.text;
-  document.querySelector('.author-box').innerHTML = quote.author;
-});
+  document.querySelector('.quote-box').innerHTML = '<span>"</span>' + quote.text;
+  document.querySelector('.author-box').innerHTML = "- " + quote.author;
+  document.querySelector('.twitter-share-button').setAttribute("data-text", quote.text);
+  reloadTwitter();
+}
+
+document.querySelector('#button').addEventListener("click", init);
+
+reloadTwitter();
+init();
+

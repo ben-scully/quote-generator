@@ -2,11 +2,15 @@
   box-sizing: border-box;
 }
 
+body { 
+  background: tomato;
+}
+
 #wrapper {
   margin: 0 auto;
   width: 600px;
   min-height: 200px;
-  background-color: green;
+  background-color: white;
   padding: 40px;
 }
 
@@ -16,21 +20,34 @@
 
 .quote-box {
   min-height: 50px;
-  background: blue;
   text-align: center;
+  color: tomato;
 
 }
 
 .author-box {
   text-align: right;
   margin-top: 10px; 
+  color: tomato;
 }
 
 #buttons {
-  background-color: yellow;
+
 }
 
 #button {
   float: right;
-  color: red;
+  
+}
+
+button {
+  background-color: tomato;
+  padding: 2%;
+  color: white;
+  border: none;
+  border-radius: 2px;
+}
+
+span {
+  font-size: 5em;
 }
