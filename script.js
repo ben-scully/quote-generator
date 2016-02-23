@@ -37,14 +37,11 @@ var updateTwitter = function(){
 
 var init = function(){
   var quote = grabQuote();
-  //console.log(quote)
   document.querySelector('.quote-box').innerHTML = '<span>"</span>' + quote.text;
   document.querySelector('.author-box').innerHTML = "- " + quote.author;
   document.querySelector('.twitter-share-button').setAttribute("data-text", quote.text);
 }
 
-//document.querySelector('#button').addEventListener("click", init);
-//document.querySelector('#button').addEventListener("click", updateTwitter);
 document.querySelector('#button').addEventListener("click", function(){
   init();
   updateTwitter();
