@@ -12,6 +12,14 @@ body {
   min-height: 200px;
   background-color: white;
   padding: 40px;
+  }
+
+.img-box {
+  height: 110px;
+  min-width: 95px;
+  background-color: blue;
+  float: left;
+  margin-top: 10px;
 }
 
 #quote {
@@ -48,6 +56,14 @@ button {
   border-radius: 2px;
 }
 
+#twitter {
+  display: inline-block;
+}
+
 span {
   font-size: 5em;
+}
+
+.title {
+  
 }
