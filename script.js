@@ -48,6 +48,7 @@ var init = function(){
   var quote = grabQuote();
   document.querySelector('.quote-box').innerHTML = '<span>"</span>' + quote.text;
   document.querySelector('.author-box').innerHTML = "- " + quote.author;
+  document.querySelector('.img-box').style.backgroundImage = "url(" + quote.image + ")";
   document.querySelector('.twitter-share-button').setAttribute("data-text", quote.text);
 }
 

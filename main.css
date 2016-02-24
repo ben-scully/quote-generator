@@ -58,6 +58,7 @@ button {
 
 #twitter {
   display: inline-block;
+  background-image: url();
 }
 
 span {
@@ -65,5 +66,8 @@ span {
 }
 
 .title {
-  
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
+
